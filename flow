@@ -1,0 +1,589 @@
+[
+    {
+        "id": "d047b1d8.de993",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5e1be92d.83d9f",
+        "type": "ui_switch",
+        "z": "d047b1d8.de993",
+        "name": "IR LED",
+        "label": "IR_LED",
+        "group": "ddbc7c55.8687b",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "3c187073.3c62d"
+            ]
+        ]
+    },
+    {
+        "id": "fe5902fc.4c6fe",
+        "type": "ui_switch",
+        "z": "d047b1d8.de993",
+        "name": "HP LED",
+        "label": "HP_LED",
+        "group": "ddbc7c55.8687b",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "4fd7d10a.47866"
+            ]
+        ]
+    },
+    {
+        "id": "1be623e5.f809fc",
+        "type": "ui_switch",
+        "z": "d047b1d8.de993",
+        "name": "Laser Diode",
+        "label": "LASER_DIODE",
+        "group": "ddbc7c55.8687b",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "de470858.1a1e28"
+            ]
+        ]
+    },
+    {
+        "id": "b576be86.117e08",
+        "type": "ui_switch",
+        "z": "d047b1d8.de993",
+        "name": "Haptic Feedback Device Motor",
+        "label": "HFD_MOTOR",
+        "group": "ddbc7c55.8687b",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "4ae65ad.96c42a4"
+            ]
+        ]
+    },
+    {
+        "id": "afde85a.0bfeef8",
+        "type": "rpi-gpio out",
+        "z": "d047b1d8.de993",
+        "name": "IR_LED",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 970,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6f3fd6d7.e50578",
+        "type": "rpi-gpio out",
+        "z": "d047b1d8.de993",
+        "name": "HP_LED",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "129ce5fa.c626e2",
+        "type": "rpi-gpio out",
+        "z": "d047b1d8.de993",
+        "name": "LASER_DIODE",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 990,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fcb2385a.d4bdd",
+        "type": "rpi-gpio out",
+        "z": "d047b1d8.de993",
+        "name": "HFD_MOTOR",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 990,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4a0065dd.bec3c4",
+        "type": "speakerpi-output",
+        "z": "d047b1d8.de993",
+        "choose": "filebased",
+        "filename": "",
+        "channels": "1",
+        "bitdepth": "8",
+        "samplerate": "11025",
+        "name": "",
+        "x": 900,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "fdf07cab.25e62",
+        "type": "ui_text_input",
+        "z": "d047b1d8.de993",
+        "name": "Text to speech",
+        "label": "Text to speech box",
+        "group": "ddbc7c55.8687b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 80,
+        "y": 340,
+        "wires": [
+            [
+                "9cfc85fd.cbf29"
+            ]
+        ]
+    },
+    {
+        "id": "b28f0bad.97b22",
+        "type": "ui_audio",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "voice": "",
+        "always": "",
+        "x": 900,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "750e63d7.26332c",
+        "type": "e-mail",
+        "z": "d047b1d8.de993",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "",
+        "dname": "",
+        "x": 1010,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "762122b0.4abef4",
+        "type": "pythonshell in",
+        "z": "d047b1d8.de993",
+        "x": 800,
+        "y": 420,
+        "wires": [
+            [
+                "4a0065dd.bec3c4",
+                "b28f0bad.97b22"
+            ]
+        ]
+    },
+    {
+        "id": "f1283fbd.7ae73",
+        "type": "motion-event",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "topic": "",
+        "cam": "",
+        "x": 70,
+        "y": 600,
+        "wires": [
+            [
+                "c19c8cbe.f8796"
+            ]
+        ]
+    },
+    {
+        "id": "3c187073.3c62d",
+        "type": "html",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "x": 670,
+        "y": 100,
+        "wires": [
+            [
+                "afde85a.0bfeef8"
+            ]
+        ]
+    },
+    {
+        "id": "4fd7d10a.47866",
+        "type": "html",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "x": 670,
+        "y": 160,
+        "wires": [
+            [
+                "6f3fd6d7.e50578"
+            ]
+        ]
+    },
+    {
+        "id": "de470858.1a1e28",
+        "type": "html",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "x": 670,
+        "y": 220,
+        "wires": [
+            [
+                "129ce5fa.c626e2"
+            ]
+        ]
+    },
+    {
+        "id": "4ae65ad.96c42a4",
+        "type": "html",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "fcb2385a.d4bdd"
+            ]
+        ]
+    },
+    {
+        "id": "9cfc85fd.cbf29",
+        "type": "html",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "762122b0.4abef4"
+            ]
+        ]
+    },
+    {
+        "id": "8949ab21.2af3e8",
+        "type": "twitter out",
+        "z": "d047b1d8.de993",
+        "twitter": "",
+        "name": "Tweet",
+        "x": 1010,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "c19c8cbe.f8796",
+        "type": "exec",
+        "z": "d047b1d8.de993",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "b44a9b82.3794d8",
+                "55e97881.f0ce8"
+            ],
+            [],
+            [
+                "750e63d7.26332c",
+                "8949ab21.2af3e8"
+            ]
+        ]
+    },
+    {
+        "id": "ad876549.af6ef",
+        "type": "exec",
+        "z": "d047b1d8.de993",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "5e1be92d.83d9f",
+                "fe5902fc.4c6fe",
+                "1be623e5.f809fc",
+                "b576be86.117e08"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "475b65b4.558b7c",
+        "type": "e-mail in",
+        "z": "d047b1d8.de993",
+        "name": "Email",
+        "protocol": "IMAP",
+        "server": "imap.gmail.com",
+        "useSSL": true,
+        "port": "993",
+        "box": "INBOX",
+        "disposition": "Read",
+        "repeat": "300",
+        "x": 50,
+        "y": 160,
+        "wires": [
+            [
+                "ad876549.af6ef"
+            ]
+        ]
+    },
+    {
+        "id": "2050aca0.d1b5bc",
+        "type": "e-mail",
+        "z": "d047b1d8.de993",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "",
+        "dname": "",
+        "x": 990,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "5e9267ad.940d18",
+        "type": "twitter in",
+        "z": "d047b1d8.de993",
+        "tags": "",
+        "user": "false",
+        "name": "",
+        "inputs": 0,
+        "x": 70,
+        "y": 1300,
+        "wires": [
+            [
+                "6c39de1e.c50a3"
+            ]
+        ]
+    },
+    {
+        "id": "6c39de1e.c50a3",
+        "type": "exec",
+        "z": "d047b1d8.de993",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 460,
+        "y": 1320,
+        "wires": [
+            [
+                "2050aca0.d1b5bc",
+                "e29fa2ca.7b13c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e29fa2ca.7b13c",
+        "type": "twitter out",
+        "z": "d047b1d8.de993",
+        "name": "Tweet",
+        "x": 990,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "55e97881.f0ce8",
+        "type": "function",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 660,
+        "wires": [
+            [
+                "6d49c93c.fd3d78"
+            ]
+        ]
+    },
+    {
+        "id": "6d49c93c.fd3d78",
+        "type": "pythonshell in",
+        "z": "d047b1d8.de993",
+        "x": 800,
+        "y": 760,
+        "wires": [
+            [
+                "5a73a90e.afc13",
+                "b8241310.13b4a"
+            ]
+        ]
+    },
+    {
+        "id": "5a73a90e.afc13",
+        "type": "ui_audio",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "voice": "",
+        "always": "",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b8241310.13b4a",
+        "type": "speakerpi-output",
+        "z": "d047b1d8.de993",
+        "choose": "filebased",
+        "filename": "",
+        "channels": "1",
+        "bitdepth": "8",
+        "samplerate": "11025",
+        "name": "",
+        "x": 922,
+        "y": 825,
+        "wires": []
+    },
+    {
+        "id": "b44a9b82.3794d8",
+        "type": "html",
+        "z": "d047b1d8.de993",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddbc7c55.8687b",
+        "type": "ui_group",
+        "z": "",
+        "name": "ServoSkull690 Control",
+        "tab": "a02e7f06.c33b98",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a02e7f06.c33b98",
+        "type": "ui_tab",
+        "z": "",
+        "name": "ServoSkull Platform",
+        "icon": "dashboard"
+    }
+]
